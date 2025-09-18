@@ -3,10 +3,7 @@
 
 no css 🙅 all my homies hate css
 
-link(for now changes all the time):https://brown-singers-sort.loca.lt/
-
-password:136.38.193.176
-
-link: https://loca.lt/mytunnelpassword
+lt --port 8000
+https://theboroer.github.io/localtunnel-www/
 
 in case i forget
