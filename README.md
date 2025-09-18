@@ -1,7 +1,7 @@
 # wow oh wow it works and also it hates iframes for some reason
 
 
-no css 🙅
+no css 🙅 all my homies hate css
 
 link(for now changes all the time):https://brown-singers-sort.loca.lt/
 
