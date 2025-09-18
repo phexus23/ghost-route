@@ -3,7 +3,7 @@
 
 no css 🙅 all my homies hate css
 
-lt --port 8000
+lt --port 8080
 https://theboroer.github.io/localtunnel-www/
 
 in case i forget
