@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fortnite</title>
+  <script src="/uv/uv.bundle.js"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="/baremux/index.js"></script>
+  <script src="/epoxy/index.mjs" type="module"></script>
+</head>
+<body>
+  <p id="text">????</p>
+
+  <script type="module">
+    const connection = new BareMux.BareMuxConnection("/baremux/worker.js");
+
+    const wispUrl = (location.protocol === "https:" ? "wss" : "ws") +
+      "://" + location.host + "/wisp/";
+
+    const iframeWindow = document.getElementById("proxyFrame");
+
+    (async () => {
+      if (!await connection.getTransport()) {
+        await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
+      }
+
+      const url = "https://educationbluesky.com/apps/a/19900/b.html";
+      window.open(__uv$config.prefix + __uv$config.encodeUrl(url), "_blank");
+      const p = document.getElementById("text");
+      
+      p.innerHTML = `If the auto redirect doesn't work, go here: <a href="${__uv$config.prefix + __uv$config.encodeUrl(url)}" target="_blank">over here bluh</a>`;
+
+    })();
+  </script>
+</body>
+</html>

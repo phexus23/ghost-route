@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search ig</title>
+
+    <script src="../uv/uv.bundle.js"></script>
+    <script src="../uv/uv.config.js"></script>
+    <script src="../baremux/index.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", async () => {
+                await navigator.serviceWorker.register("/uv/sw.js");
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1>hi twin </h1>
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button id="searchButton">Search</button>
+        <select id="switcher">
+            <option value="">Default (dont touch if you dont know what your doing)</option>
+            <option value="epoxy">Epoxy</option>
+            <option value="bare">Bare</option>
+        </select>
+    </header>
+
+    <script src="example.js"></script>
+</body>
+</html>
