@@ -3,6 +3,8 @@
 
 no css 🙅
 
+link(for now changes all the time):https://brown-singers-sort.loca.lt/
+
 password:136.38.193.176
 
 link: https://loca.lt/mytunnelpassword
