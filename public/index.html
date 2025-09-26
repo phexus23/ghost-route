@@ -1,86 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hi twin</title>
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Heebo", "Arial", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Route</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            color: #4db8ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    body {
-        background-color: #1a1a1d;
-        color: #eaeaea;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-bottom: 50px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #4db8ff;
+        }
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 40px;
-        color: #00f0ff;
-        text-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
-    }
+        .hero {
+            max-width: 700px;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            color: #b0b0b0;
+        }
+        .url-bar {
+            display: flex;
+            width: 100%;
+        }
+        .url-bar input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        .url-bar button {
+            padding: 15px 25px;
+            border: none;
+            background-color: #4db8ff;
+            color: #1a1a1a;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.3s;
+        }
+        .url-bar button:hover {
+            background-color: #3399ff;
+        }
 
-    .links {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+        .tech {
+            margin-top: 50px;
+            max-width: 700px;
+            text-align: left;
+        }
+        .tech h2 {
+            margin-bottom: 15px;
+            color: #4db8ff;
+        }
+        .tech ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .tech li {
+            margin-bottom: 10px;
+            font-family: 'Fira Mono', monospace;
+            font-size: 0.95rem;
+        }
 
-    .links a {
-        text-decoration: none;
-        padding: 15px 40px;
-        border-radius: 12px;
-        background: linear-gradient(145deg, #00f0ff, #0077ff);
-        color: #fff;
-        font-weight: bold;
-        font-size: 1.3rem;
-        transition: all 0.3s ease;
-    }
-
-    .links a:hover {
-        transform: scale(1.08);
-        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6);
-    }
-  </style>
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        footer a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>This is super slow for some reason</h1>
-  <div class="links">
-    <a href="#" onclick="silly(); return false;">Lanschool bypass</a>
-    <a href="/robloc">Roblox</a>
-    <a href="/nvidia">Fortnite</a>
-    <a href="#" onclick="alertnredirect(); return false;">Search</a>
 
-  </div>
-  <script>
-async function silly() {
-    try {
-        const response = await fetch('bypass.js');
-        if (!response.ok) throw new Error('something went wrong uh oh');
-        
-        const scriptContent = await response.text();
+    <header>
+        <div class="logo">Ghost route</div>
+        <div class="links">
+            <a href="#">Docs</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
 
-        await navigator.clipboard.writeText(scriptContent);
-        alert("Its on your clipboard now cuh, paste it in the console when you need.");
-    } catch (err) {
-        alert("yeah ur just a loser");
-        console.error(err);
-    }
-}
-function alertnredirect () {
-alert("Dont search anything weird, my parents can see everything you search (and ill get in trouble)")
-window.location.href = "/search";
-}
-  </script>
+    <div class="hero">
+        <h1>Secure, Anonymous Web Proxy</h1>
+        <p>Forward requests via encrypted connections, hide your IP, and bypass regional restrictions.</p>
+        <div class="url-bar">
+            <input type="text" placeholder="Enter URL or search query">
+            <button>Go</button>
+        </div>
+    </div>
+
+    <div class="tech">
+        <h2>Technical Details</h2>
+        <ul>
+            <li>Header intercept proxy</li>
+            <li>Uses ultraviolet</li>
+            <li>Hosted from my home computer</li>
+        </ul>
+    </div>
+
+    <footer>
+        <a href="https://github.com/phexus23/ghost-route">GitHub</a>
+    </footer>
+
 </body>
 </html>

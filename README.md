@@ -12,3 +12,7 @@ in case i forget
 another cool option 
 
 ssh -R 80:localhost:8080 serveo.net
+
+another option
+powershell
+relay connect --name my-tunnel :8080
